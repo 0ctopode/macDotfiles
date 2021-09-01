@@ -3,9 +3,7 @@
 # export PYTHONPATH=""
 
 # ===== Print =====
-echo
 date
-echo "pwd: "$PWD
 
 # ===== Initialising =====
 export BASH_SILENCE_DEPRECATION_WARNING=1  # For that dumb mac terminal message
