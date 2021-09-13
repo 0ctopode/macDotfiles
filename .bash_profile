@@ -9,7 +9,7 @@ export BASH_SILENCE_DEPRECATION_WARNING=1  # For that dumb mac terminal message
 
 alias lsa="ls -alG"
 alias ls="ls -hG"
-alias cal="cal -y 2021"  # TODO: This is dumb why did I hardcode the year
+alias cal="cal -y"
 alias df="df -H"
 alias usb="cd /Volumes"
 alias doc="cd $HOME/Documents"
