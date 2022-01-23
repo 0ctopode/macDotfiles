@@ -1,5 +1,18 @@
-# Adding directories to sys.path
-# export PYTHONPATH=""
+# =================================================================
+#      __               __                           _____ __   
+#     / /_  ____ ______/ /_        ____  _________  / __(_) /__ 
+#    / __ \/ __ `/ ___/ __ \      / __ \/ ___/ __ \/ /_/ / / _ \
+#   / /_/ / /_/ (__  ) / / /     / /_/ / /  / /_/ / __/ / /  __/
+#  /_.___/\__,_/____/_/ /_/_____/ .___/_/   \____/_/ /_/_/\___/ 
+#                        /_____/_/                              
+#
+# HRBush        
+# =================================================================
+
+# Setting vars I don't want publicised in my dotfiles
+if [ -f ".env" ]; then
+    . ~/.env
+fi
 
 # ===== Print =====
 date
@@ -11,15 +24,14 @@ alias lsa="ls -alG"
 alias ls="ls -hG"
 alias cal="cal -y"
 alias df="df -H"
-alias usb="cd /Volumes"
 alias doc="cd $HOME/Documents"
 alias clock="tty-clock -cs -C ${1:-4}"
-alias vim="nvim -u ~/.vimrc"
+alias vim="vim -u ~/.vimrc"
 alias brave="open -a Brave\ Browser "
 alias setclip="pbcopy"  # For cross platform consistency
 
 # NAS Aliases
-alias nasssh="ssh Harvey@192.168.1.4 -p1927"
+alias nasssh="ssh $NAS_USER@$NAS_IP -p$NAS_PORT"
 
 alias cppex="g++ -Wall -Weffc++ -Wextra -Wsign-conversion -Werror -std=c++17 -o programOut"
 alias cex="gcc -std=c99 -Wall -Werror -o"
