@@ -18,6 +18,10 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'xuhdev/vim-latex-live-preview'
 let g:livepreview_previewer = 'open -a Preview'
 
+call vundle#begin()
+  Plugin 'preservim/nerdtree'
+call vundle#end()
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
