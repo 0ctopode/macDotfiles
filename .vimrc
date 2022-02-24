@@ -16,7 +16,14 @@ call plug#begin()
 "   - e.g. `call plug#begin('~/.vim/plugged')`
 "   - Avoid using standard Vim directory names like 'plugin'a
 
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'ryanoasis/vim-devicons'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'airblade/vim-gitgutter'
+Plug 'ctrlpvim/ctrlp.vim' " fuzzy find filesa
+Plug 'preservim/nerdcommenter'
 
 " Initialize plugin system
 call plug#end()
@@ -28,7 +35,7 @@ autocmd VimEnter * NERDTree | wincmd p
 " Exit Vim if NERDTree is the only window remaining in the only tab.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 
-"Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
+"USE 24-BIT (TRUE-COLOR) MODE IN VIM/NEOVIM WHEN OUTSIDE TMUX.
 "If you're using tmux version 2.2 or later, you can remove the outermost $TMUX check and use tmux's 24-bit color support
 "(see < http://sunaku.github.io/tmux-24bit-color.html#usage > for more information.)
 if (empty($TMUX))
@@ -46,3 +53,12 @@ endif
 let g:onedark_termcolors=256
 syntax on
 colorscheme onedark
+
+" coc config
+let g:coc_global_extensions = [
+  \ 'coc-pairs',
+  \ 'coc-json',
+  \ 'coc-pyright',
+  \ 'coc-clangd',
+  \ ]
+
