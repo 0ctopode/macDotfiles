@@ -1,11 +1,12 @@
 set number
 set autoindent
-set hlsearch "highlight search results
+set hlsearch  " Highlight search results
+set mouse=a  " Mouse scrolling 
 
 set nocompatible              " be iMproved, required
-filetype off                  " required
-
-
+" filetype off                  " required
+set encoding=utf8 
+set backspace=indent,eol,start
 
 call plug#begin()
 " The default plugin directory will be as follows:
@@ -22,7 +23,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ryanoasis/vim-devicons'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'airblade/vim-gitgutter'
-Plug 'ctrlpvim/ctrlp.vim' " fuzzy find filesa
+Plug 'ctrlpvim/ctrlp.vim'  " fuzzy find files
 Plug 'preservim/nerdcommenter'
 
 " Initialize plugin system
@@ -61,4 +62,8 @@ let g:coc_global_extensions = [
   \ 'coc-pyright',
   \ 'coc-clangd',
   \ ]
+
+" Use tab and shift-tab to navigate coc completion list
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
