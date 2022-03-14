@@ -53,7 +53,8 @@ if (empty($TMUX))
 endif
 let g:onedark_termcolors=256
 syntax on
-colorscheme onedark
+" colorscheme onedark
+
 
 " coc config
 let g:coc_global_extensions = [
