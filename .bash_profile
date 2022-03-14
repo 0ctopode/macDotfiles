@@ -28,6 +28,7 @@ alias vim="vim -u ~/.vimrc"
 alias brave="open -a Brave\ Browser "
 alias setclip="pbcopy"  # For cross platform consistency
 
+alias unissh="ssh hrb76@linux.cosc.canterbury.ac.nz"
 # NAS Aliases
 alias nasssh="ssh $NAS_USER@$NAS_IP -p$NAS_PORT"
 
@@ -40,6 +41,10 @@ PATH="/opt/local/bin:/opt/homebrew/bin:${PATH}"
 DOTFILES=$HOME/Documents/projects/macDotfiles.git
 alias gitd='git --git-dir=$DOTFILES --work-tree=$HOME'
 gitd config status.showUntrackedFiles no
+
+dlmp3 () {
+        youtube-dl --extract-audio --audio-format mp3 "$1"
+}
 
 # ===== AUTOGEN =====
 
