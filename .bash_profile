@@ -24,7 +24,7 @@ alias cal="cal -y"
 alias df="df -H"
 alias doc="cd $HOME/Documents"
 alias clock="tty-clock -cs -C ${1:-4}"
-alias vim="vim -u ~/.vimrc"
+alias vim="nvim"
 alias brave="open -a Brave\ Browser "
 alias setclip="pbcopy"  # For cross platform consistency
 
