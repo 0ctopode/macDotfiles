@@ -22,8 +22,9 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ryanoasis/vim-devicons'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'airblade/vim-gitgutter'
-Plug 'ctrlpvim/ctrlp.vim'  " fuzzy find files
 Plug 'preservim/nerdcommenter'
+Plug 'nvim-lua/plenary.nvim'  " Dependency for telescope
+Plug 'nvim-telescope/telescope.nvim'  " Fuzzy finder
 
 Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'nvim-orgmode/orgmode'
@@ -73,7 +74,7 @@ let g:coc_global_extensions = [
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
-" ===== ORG MODE CONFIG =====
+" ===== Org Mode Config =====
 
 lua << EOF
 
@@ -94,6 +95,10 @@ require'nvim-treesitter.configs'.setup {
 require('orgmode').setup({
   org_agenda_files = {'~/Dropbox/org/*', '~/my-orgs/**/*'},
   org_default_notes_file = '~/Dropbox/org/refile.org',
+  org_indent_mode = 'noindent',
 })
 EOF
-" ===============
+
+" ===== Telescope =====
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+
