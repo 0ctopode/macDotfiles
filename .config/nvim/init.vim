@@ -7,6 +7,8 @@ set nocompatible              " be iMproved, required
 " filetype off                  " required
 set encoding=utf8 
 set backspace=indent,eol,start
+" Set tabs to be four spaces
+set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 
 call plug#begin()
 " The default plugin directory will be as follows:
