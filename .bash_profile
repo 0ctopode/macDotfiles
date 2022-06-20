@@ -1,11 +1,11 @@
-#      __               __                           _____ __   
-#     / /_  ____ ______/ /_        ____  _________  / __(_) /__ 
+#      __               __                           _____ __
+#     / /_  ____ ______/ /_        ____  _________  / __(_) /__
 #    / __ \/ __ `/ ___/ __ \      / __ \/ ___/ __ \/ /_/ / / _ \
 #   / /_/ / /_/ (__  ) / / /     / /_/ / /  / /_/ / __/ / /  __/
-#  /_.___/\__,_/____/_/ /_/_____/ .___/_/   \____/_/ /_/_/\___/ 
-#                        /_____/_/                              
+#  /_.___/\__,_/____/_/ /_/_____/ .___/_/   \____/_/ /_/_/\___/
+#                        /_____/_/
 #
-# HRBush        
+# HRBush
 
 # Setting vars I don't want publicised in my dotfiles
 if [ -f ".env" ]; then
@@ -47,7 +47,6 @@ dlmp3 () {
 }
 
 # ===== AUTOGEN =====
-
 # Setting PATH for Python 3.9
 # The original version is saved in .bash_profile.pysave
 PATH="/Library/Frameworks/Python.framework/Versions/3.9/bin:${PATH}"
@@ -71,7 +70,6 @@ unset __conda_setup
 
 # Start Starship prompt
 eval "$(starship init bash)"
-
 
 ##
 # Your previous /Users/hrbush/.bash_profile file was backed up as /Users/hrbush/.bash_profile.macports-saved_2021-04-04_at_12:02:27
