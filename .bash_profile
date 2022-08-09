@@ -79,3 +79,4 @@ eval "$(starship init bash)"
 export DISPLAY=:0
 # Finished adapting your DISPLAY environment variable for use with MacPorts.
 
+. "$HOME/.cargo/env"
