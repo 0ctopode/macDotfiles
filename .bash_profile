@@ -80,3 +80,12 @@ export DISPLAY=:0
 # Finished adapting your DISPLAY environment variable for use with MacPorts.
 
 . "$HOME/.cargo/env"
+
+# Setting env var and path for Android Studio
+export ANDROID_HOME=/Users/hrbush/Library/Android/sdk
+export PATH=/Users/hrbush/Library/Android/sdk/platform-tools:$PATH
+
+
+# Added by Toolbox App
+export PATH="$PATH:/Users/hrbush/Library/Application Support/JetBrains/Toolbox/scripts"
+
