@@ -25,8 +25,8 @@ alias df="df -H"
 alias doc="cd $HOME/Documents"
 alias clock="tty-clock -cs -C ${1:-4}"
 alias vim="nvim"
-alias brave="open -a Brave\ Browser "
 alias setclip="pbcopy"  # For cross platform consistency
+alias ra="ssh harvey@ra.treshna.com"
 
 alias unissh="ssh hrb76@linux.cosc.canterbury.ac.nz"
 # NAS Aliases
@@ -39,8 +39,8 @@ PATH="/opt/local/bin:/opt/homebrew/bin:${PATH}"
 
 # ===== Dotfile Repo =====
 DOTFILES=$HOME/Documents/projects/macDotfiles.git
-alias gitd='git --git-dir=$DOTFILES --work-tree=$HOME'
-gitd config status.showUntrackedFiles no
+alias dots='git --git-dir=$DOTFILES --work-tree=$HOME'
+dots config status.showUntrackedFiles no
 
 dlmp3 () {
         youtube-dl --extract-audio --audio-format mp3 "$1"
